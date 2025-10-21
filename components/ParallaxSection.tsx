@@ -47,7 +47,7 @@ export default function ParallaxSection({ children, className = "", id }: Parall
   return (
     <div ref={containerRef} id={id} className={`relative overflow-hidden ${className}`}>
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-rose-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-rose-50 dark:from-dark-800 dark:via-dark-900 dark:to-dark-800" />
       
       {/* Floating Sakura petals */}
       {[...Array(20)].map((_, i) => (
@@ -148,7 +148,7 @@ export default function ParallaxSection({ children, className = "", id }: Parall
       </div>
 
       {/* Gradient overlays for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70 pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70 dark:from-dark-900/90 dark:via-transparent dark:to-dark-900/70 pointer-events-none z-10" />
     </div>
   )
 }

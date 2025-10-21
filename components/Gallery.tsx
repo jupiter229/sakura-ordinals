@@ -16,6 +16,9 @@ const galleryImages = [
   { id: 500, src: '/assets/sakura_500.png', alt: 'Sakura Ordinal #500' },
   { id: 600, src: '/assets/sakura_600.png', alt: 'Sakura Ordinal #600' },
   { id: 666, src: '/assets/sakura_666.png', alt: 'Sakura Ordinal #666' },
+  { id: 750, src: '/assets/sakura_750.png', alt: 'Sakura Ordinal #750' },
+  { id: 850, src: '/assets/sakura_850.png', alt: 'Sakura Ordinal #850' },
+  { id: 950, src: '/assets/sakura_950.png', alt: 'Sakura Ordinal #950' },
 ]
 
 export default function Gallery() {
@@ -41,7 +44,7 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="section-padding bg-gradient-to-br from-pink-50 to-rose-50">
+    <section id="gallery" className="section-padding bg-gradient-to-br from-pink-50 to-rose-50 dark:from-dark-800 dark:to-dark-700">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,7 +55,7 @@ export default function Gallery() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Meet the <span className="gradient-text">Sakura Collection</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Each Sakura Ordinal is a unique piece of art, but more importantly, 
             it's your key to the future of web3 dating.
           </p>
@@ -69,7 +72,7 @@ export default function Gallery() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl bg-white p-4">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl bg-white dark:bg-dark-800 p-4">
               <Image
                 src={galleryImages[currentIndex].src}
                 alt={galleryImages[currentIndex].alt}
@@ -80,7 +83,7 @@ export default function Gallery() {
               />
               
               {/* Overlay with ordinal number */}
-              <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+              <div className="absolute top-6 left-6 bg-white/90 dark:bg-dark-700/90 backdrop-blur-sm px-4 py-2 rounded-full">
                 <span className="font-bold text-sakura-600">
                   #{galleryImages[currentIndex].id}
                 </span>
@@ -171,18 +174,18 @@ export default function Gallery() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
         >
-          <div className="text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">999</div>
-            <div className="text-gray-600">Unique Ordinals</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">100%</div>
-            <div className="text-gray-600">Utility Focused</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">∞</div>
-            <div className="text-gray-600">Possibilities</div>
-          </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold gradient-text mb-2">999</div>
+              <div className="text-gray-600 dark:text-gray-300">Unique Ordinals</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold gradient-text mb-2">100%</div>
+              <div className="text-gray-600 dark:text-gray-300">Utility Focused</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold gradient-text mb-2">∞</div>
+              <div className="text-gray-600 dark:text-gray-300">Possibilities</div>
+            </div>
         </motion.div>
       </div>
     </section>

@@ -92,7 +92,7 @@ export default function Home() {
       <ParallaxHero />
 
       {/* Problem Section */}
-      <section id="about" className="section-padding bg-white">
+      <section id="about" className="section-padding bg-white dark:bg-dark-800">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -103,7 +103,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               The Current State of <span className="gradient-text">Ordinals</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Most Bitcoin Ordinals today are limited to simple PFPs and pixel art due to high inscription fees and lack of utility.
             </p>
           </motion.div>
@@ -125,7 +125,7 @@ export default function Home() {
                 ].map((limitation, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span className="text-gray-700">{limitation}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{limitation}</span>
                   </div>
                 ))}
               </div>
@@ -135,7 +135,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-sakura-50 to-cherry-50 p-8 rounded-2xl"
+              className="bg-gradient-to-br from-sakura-50 to-cherry-50 dark:from-sakura-900/20 dark:to-cherry-900/20 p-8 rounded-2xl"
             >
               <h3 className="text-2xl font-bold mb-6 text-sakura-600">Our Solution</h3>
               <div className="space-y-4">
@@ -148,7 +148,7 @@ export default function Home() {
                 ].map((solution, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-700">{solution}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{solution}</span>
                   </div>
                 ))}
               </div>
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* Utilities Section with Parallax */}
-      <ParallaxSection id="utilities" className="section-padding bg-gradient-to-br from-pink-50 to-rose-50">
+      <ParallaxSection id="utilities" className="section-padding bg-gradient-to-br from-pink-50 to-rose-50 dark:from-dark-800 dark:to-dark-700">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -169,7 +169,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Real <span className="gradient-text">Utilities</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Your Sakura Ordinal isn't just a collectible - it's your key to a revolutionary web3 dating experience.
             </p>
           </motion.div>
@@ -200,16 +200,16 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-white p-8 rounded-2xl shadow-lg card-hover"
+                className="bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg card-hover"
               >
                 <div className="text-sakura-500 mb-4">{utility.icon}</div>
                 <h3 className="text-2xl font-bold mb-4">{utility.title}</h3>
-                <p className="text-gray-600 mb-6">{utility.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">{utility.description}</p>
                 <ul className="space-y-2">
                   {utility.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-500" />
-                      <span className="text-sm text-gray-600">{feature}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -223,7 +223,7 @@ export default function Home() {
       <Gallery />
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="section-padding bg-white">
+      <section id="roadmap" className="section-padding bg-white dark:bg-dark-800">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -234,7 +234,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Development <span className="gradient-text">Roadmap</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Our journey from launch to a fully functional web3 dating platform.
             </p>
           </motion.div>
@@ -285,12 +285,12 @@ export default function Home() {
                       {phase.phase}
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{phase.title}</h3>
-                    <p className="text-gray-600 mb-4">{phase.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">{phase.description}</p>
                     <div className="space-y-2">
                       {phase.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-500" />
-                          <span className="text-sm text-gray-600">{feature}</span>
+                          <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -308,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* Launch Section */}
-      <section id="launch" className="section-padding bg-gradient-to-br from-sakura-500 to-cherry-500 text-white">
+      <section id="launch" className="section-padding bg-gradient-to-br from-sakura-500 to-cherry-500 dark:from-sakura-600 dark:to-cherry-600 text-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -377,14 +377,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 dark:bg-dark-900 text-white py-12">
         <div className="container-custom">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-sakura-500 to-cherry-500 rounded-full"></div>
               <span className="text-xl font-bold">Sakura Ordinals</span>
             </div>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 dark:text-gray-500 mb-4">
               The first Bitcoin Ordinals collection with real utility
             </p>
             <div className="flex justify-center space-x-6">
