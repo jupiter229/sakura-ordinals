@@ -16,6 +16,8 @@ import {
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Gallery from '../components/Gallery'
+import ParallaxSection from '../components/ParallaxSection'
+import ParallaxHero from '../components/ParallaxHero'
 
 // Sakura petal component for background animation
 const SakuraPetal = ({ delay = 0 }: { delay?: number }) => (
@@ -75,70 +77,8 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="section-padding pt-32 pb-20">
-        <div className="container-custom">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <div className="inline-flex items-center px-4 py-2 bg-sakura-100 text-sakura-700 rounded-full text-sm font-medium mb-6">
-                <Star className="w-4 h-4 mr-2" />
-                The First Utility-Focused Bitcoin Ordinals Collection
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="gradient-text">Sakura Ordinals</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-                Beyond PFP. Beyond pixels. The first Bitcoin Ordinals collection with{' '}
-                <span className="font-semibold text-sakura-600">real utility</span> - 
-                featuring a revolutionary web3 dating platform.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <button className="btn-primary text-lg px-10 py-4">
-                <Heart className="w-5 h-5 mr-2" />
-                Join the Waitlist
-              </button>
-              <button className="btn-secondary text-lg px-10 py-4">
-                <ExternalLink className="w-5 h-5 mr-2" />
-                View on Magic Eden
-              </button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
-            >
-              <div className="text-center">
-                <div className="text-3xl font-bold gradient-text mb-2">999</div>
-                <div className="text-gray-600">Unique Ordinals</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold gradient-text mb-2">Real</div>
-                <div className="text-gray-600">Utility & Use Cases</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold gradient-text mb-2">Web3</div>
-                <div className="text-gray-600">Dating Platform</div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section with Advanced Parallax */}
+      <ParallaxHero />
 
       {/* Problem Section */}
       <section id="about" className="section-padding bg-white">
@@ -206,8 +146,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Utilities Section */}
-      <section id="utilities" className="section-padding bg-gradient-to-br from-pink-50 to-rose-50">
+      {/* Utilities Section with Parallax */}
+      <ParallaxSection id="utilities" className="section-padding bg-gradient-to-br from-pink-50 to-rose-50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -266,7 +206,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </ParallaxSection>
 
       {/* Gallery Section */}
       <Gallery />
