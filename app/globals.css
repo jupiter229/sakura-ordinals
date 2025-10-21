@@ -75,8 +75,8 @@
 
 .sakura-petal {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   background: linear-gradient(45deg, #ffb3ba, #ffdfba);
   border-radius: 50% 0 50% 0;
   animation: sakura-fall 10s linear infinite;

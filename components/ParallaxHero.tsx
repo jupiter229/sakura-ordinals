@@ -6,16 +6,16 @@ import { useRef } from 'react'
 import { Heart, ExternalLink, Star } from 'lucide-react'
 
 const heroImages = [
-  { id: 1, src: '/assets/sakura_001.png', speed: 0.2, size: 'w-16 h-16 sm:w-24 sm:h-24', position: 'top-20 left-4' },
-  { id: 50, src: '/assets/sakura_050.png', speed: 0.4, size: 'w-20 h-20 sm:w-28 sm:h-28', position: 'top-32 right-8' },
-  { id: 100, src: '/assets/sakura_100.png', speed: 0.3, size: 'w-14 h-14 sm:w-20 sm:h-20', position: 'top-48 left-1/4' },
-  { id: 150, src: '/assets/sakura_150.png', speed: 0.6, size: 'w-18 h-18 sm:w-24 sm:h-24', position: 'top-64 right-1/3' },
-  { id: 200, src: '/assets/sakura_200.png', speed: 0.1, size: 'w-16 h-16 sm:w-22 sm:h-22', position: 'top-80 left-1/2' },
-  { id: 300, src: '/assets/sakura_300.png', speed: 0.5, size: 'w-22 h-22 sm:w-32 sm:h-32', position: 'top-96 right-1/4' },
-  { id: 400, src: '/assets/sakura_400.png', speed: 0.3, size: 'w-12 h-12 sm:w-18 sm:h-18', position: 'top-32 left-3/4' },
-  { id: 500, src: '/assets/sakura_500.png', speed: 0.7, size: 'w-20 h-20 sm:w-28 sm:h-28', position: 'top-56 right-16' },
-  { id: 600, src: '/assets/sakura_600.png', speed: 0.2, size: 'w-16 h-16 sm:w-22 sm:h-22', position: 'top-72 left-1/6' },
-  { id: 666, src: '/assets/sakura_666.png', speed: 0.4, size: 'w-24 h-24 sm:w-36 sm:h-36', position: 'top-40 right-1/2' },
+  { id: 1, src: '/assets/sakura_001.png', speed: 0.2, size: 'w-20 h-20 sm:w-28 sm:h-28', position: 'top-20 left-4' },
+  { id: 50, src: '/assets/sakura_050.png', speed: 0.4, size: 'w-24 h-24 sm:w-32 sm:h-32', position: 'top-32 right-8' },
+  { id: 100, src: '/assets/sakura_100.png', speed: 0.3, size: 'w-18 h-18 sm:w-24 sm:h-24', position: 'top-48 left-1/4' },
+  { id: 150, src: '/assets/sakura_150.png', speed: 0.6, size: 'w-22 h-22 sm:w-28 sm:h-28', position: 'top-64 right-1/3' },
+  { id: 200, src: '/assets/sakura_200.png', speed: 0.1, size: 'w-20 h-20 sm:w-26 sm:h-26', position: 'top-80 left-1/2' },
+  { id: 300, src: '/assets/sakura_300.png', speed: 0.5, size: 'w-26 h-26 sm:w-36 sm:h-36', position: 'top-96 right-1/4' },
+  { id: 400, src: '/assets/sakura_400.png', speed: 0.3, size: 'w-16 h-16 sm:w-22 sm:h-22', position: 'top-32 left-3/4' },
+  { id: 500, src: '/assets/sakura_500.png', speed: 0.7, size: 'w-24 h-24 sm:w-32 sm:h-32', position: 'top-56 right-16' },
+  { id: 600, src: '/assets/sakura_600.png', speed: 0.2, size: 'w-20 h-20 sm:w-26 sm:h-26', position: 'top-72 left-1/6' },
+  { id: 666, src: '/assets/sakura_666.png', speed: 0.4, size: 'w-28 h-28 sm:w-40 sm:h-40', position: 'top-40 right-1/2' },
 ]
 
 export default function ParallaxHero() {
@@ -55,7 +55,7 @@ export default function ParallaxHero() {
       {/* Parallax Sakura Ordinals */}
       {heroImages.map((image, index) => {
         const y = useTransform(smoothScrollY, [0, 1], [0, -300 * image.speed])
-        const opacity = useTransform(smoothScrollY, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
+        const opacity = useTransform(smoothScrollY, [0, 0.2, 0.8, 1], [1, 1, 1, 0])
         const scale = useTransform(smoothScrollY, [0, 0.5, 1], [0.8, 1, 1.2])
         const rotate = useTransform(smoothScrollY, [0, 1], [0, 360 * image.speed])
         const x = useTransform(smoothScrollY, [0, 1], [0, 100 * (index % 2 === 0 ? 1 : -1)])
@@ -65,7 +65,7 @@ export default function ParallaxHero() {
             key={image.id}
             className={`absolute ${image.position} ${image.size} z-10`}
             style={{ y, opacity, scale, rotate, x }}
-            initial={{ opacity: 0, scale: 0.5, y: 200 }}
+            initial={{ opacity: 1, scale: 0.8, y: 0 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ 
               duration: 1.2, 
