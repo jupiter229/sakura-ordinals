@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Sakura Ordinals - Real Utility Bitcoin Ordinals Collection',
-  description: 'The first Bitcoin Ordinals collection with real utility - featuring a web3 dating platform. 666 unique Sakura pieces with actual use cases beyond PFP.',
+  description: 'The first Bitcoin Ordinals collection with real utility - featuring a web3 dating platform. 999 unique Sakura pieces with actual use cases beyond PFP.',
   keywords: 'Bitcoin Ordinals, NFT, Web3 Dating, Sakura, Utility NFTs, Bitcoin Inscriptions',
   authors: [{ name: 'Sakura Ordinals Team' }],
   openGraph: {

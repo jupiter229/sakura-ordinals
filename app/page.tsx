@@ -15,6 +15,7 @@ import {
   Rocket
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import Gallery from '../components/Gallery'
 
 // Sakura petal component for background animation
 const SakuraPetal = ({ delay = 0 }: { delay?: number }) => (
@@ -66,6 +67,7 @@ export default function Home() {
             >
               <a href="#about" className="text-gray-600 hover:text-sakura-500 transition-colors">About</a>
               <a href="#utilities" className="text-gray-600 hover:text-sakura-500 transition-colors">Utilities</a>
+              <a href="#gallery" className="text-gray-600 hover:text-sakura-500 transition-colors">Gallery</a>
               <a href="#roadmap" className="text-gray-600 hover:text-sakura-500 transition-colors">Roadmap</a>
               <a href="#launch" className="text-gray-600 hover:text-sakura-500 transition-colors">Launch</a>
             </motion.div>
@@ -122,7 +124,7 @@ export default function Home() {
               className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-text mb-2">666</div>
+                <div className="text-3xl font-bold gradient-text mb-2">999</div>
                 <div className="text-gray-600">Unique Ordinals</div>
               </div>
               <div className="text-center">
@@ -266,6 +268,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <Gallery />
+
       {/* Roadmap Section */}
       <section id="roadmap" className="section-padding bg-white">
         <div className="container-custom">
@@ -289,7 +294,7 @@ export default function Home() {
                 {
                   phase: "Phase 1",
                   title: "Collection Launch",
-                  description: "Launch 666 Sakura Ordinals on Magic Eden Launchpad",
+                  description: "Launch 999 Sakura Ordinals on Magic Eden Launchpad",
                   status: "Current",
                   features: ["Magic Eden integration", "Community building", "Initial marketing"]
                 },
@@ -374,7 +379,7 @@ export default function Home() {
                 <div className="space-y-2 text-left">
                   <div className="flex justify-between">
                     <span>Total Supply:</span>
-                    <span className="font-semibold">666</span>
+                    <span className="font-semibold">999</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Platform:</span>

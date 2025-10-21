@@ -146,7 +146,7 @@ This project is licensed under the MIT License.
 Sakura Ordinals represents a new era of Bitcoin Ordinals - moving beyond simple PFPs to create real utility and value. Our web3 dating platform will revolutionize how people connect in the decentralized world.
 
 **Key Features:**
-- 666 unique Sakura Ordinals
+- 999 unique Sakura Ordinals
 - Real utility through web3 dating platform
 - ERC-721 vault system for smooth trading
 - Exclusive community access

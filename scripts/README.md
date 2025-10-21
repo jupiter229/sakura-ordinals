@@ -4,7 +4,7 @@ This directory contains utility scripts for managing your Sakura Ordinals collec
 
 ## organize_assets.py
 
-A Python script to help organize and validate your 666 images for Magic Eden Launchpad.
+A Python script to help organize and validate your 999 images for Magic Eden Launchpad.
 
 ### Features:
 - Validates all image files
@@ -42,15 +42,15 @@ assets/
 ├── images/
 │   ├── sakura_001.png
 │   ├── sakura_002.png
-│   └── ... (666 total)
+│   └── ... (999 total)
 └── metadata/
     ├── 1.json
     ├── 2.json
-    └── ... (666 total)
+    └── ... (999 total)
 ```
 
 ## Notes:
-- Make sure you have exactly 666 images
+- Make sure you have exactly 999 images
 - Images will be converted to PNG format
 - Update the metadata template with your actual domain and Bitcoin address
 - The script validates image dimensions and format compatibility
