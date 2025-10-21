@@ -34,7 +34,7 @@ export default function ParallaxHero() {
   return (
     <div ref={containerRef} className="relative min-h-screen overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-rose-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-rose-50 dark:from-dark-800 dark:via-dark-900 dark:to-dark-800" />
       
       {/* Floating Sakura petals */}
       {[...Array(25)].map((_, i) => (
@@ -139,7 +139,7 @@ export default function ParallaxHero() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <div className="inline-flex items-center px-4 py-2 bg-sakura-100 text-sakura-700 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-sakura-100 dark:bg-sakura-900/30 text-sakura-700 dark:text-sakura-300 rounded-full text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
                 The First Utility-Focused Bitcoin Ordinals Collection
               </div>
@@ -150,7 +150,7 @@ export default function ParallaxHero() {
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 Beyond PFP. Beyond pixels. The first Bitcoin Ordinals collection with{' '}
                 <span className="font-semibold text-sakura-600">real utility</span> - 
                 featuring a revolutionary web3 dating platform.
@@ -181,15 +181,15 @@ export default function ParallaxHero() {
             >
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-sakura-500 to-cherry-500 bg-clip-text text-transparent mb-2">999</div>
-                <div className="text-gray-600">Unique Ordinals</div>
+                <div className="text-gray-600 dark:text-gray-300">Unique Ordinals</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-sakura-500 to-cherry-500 bg-clip-text text-transparent mb-2">Real</div>
-                <div className="text-gray-600">Utility & Use Cases</div>
+                <div className="text-gray-600 dark:text-gray-300">Utility & Use Cases</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-sakura-500 to-cherry-500 bg-clip-text text-transparent mb-2">Web3</div>
-                <div className="text-gray-600">Dating Platform</div>
+                <div className="text-gray-600 dark:text-gray-300">Dating Platform</div>
               </div>
             </motion.div>
           </div>
@@ -197,7 +197,7 @@ export default function ParallaxHero() {
       </div>
 
       {/* Gradient overlays for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/60 pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/60 dark:from-dark-900/90 dark:via-transparent dark:to-dark-900/60 pointer-events-none z-10" />
     </div>
   )
 }

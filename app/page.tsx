@@ -18,6 +18,7 @@ import { useState, useEffect } from 'react'
 import Gallery from '../components/Gallery'
 import ParallaxSection from '../components/ParallaxSection'
 import ParallaxHero from '../components/ParallaxHero'
+import ThemeToggle from '../components/ThemeToggle'
 
 // Sakura petal component for background animation
 const SakuraPetal = ({ delay = 0 }: { delay?: number }) => (
@@ -50,7 +51,7 @@ export default function Home() {
       ))}
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-pink-100">
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-dark-900/80 backdrop-blur-md z-50 border-b border-pink-100 dark:border-dark-700">
         <div className="container-custom">
           <div className="flex items-center justify-between py-4">
             <motion.div
@@ -62,17 +63,27 @@ export default function Home() {
               <span className="text-xl font-bold gradient-text">Sakura Ordinals</span>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="hidden md:flex items-center space-x-8"
-            >
-              <a href="#about" className="text-gray-600 hover:text-sakura-500 transition-colors">About</a>
-              <a href="#utilities" className="text-gray-600 hover:text-sakura-500 transition-colors">Utilities</a>
-              <a href="#gallery" className="text-gray-600 hover:text-sakura-500 transition-colors">Gallery</a>
-              <a href="#roadmap" className="text-gray-600 hover:text-sakura-500 transition-colors">Roadmap</a>
-              <a href="#launch" className="text-gray-600 hover:text-sakura-500 transition-colors">Launch</a>
-            </motion.div>
+            <div className="flex items-center space-x-4">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="hidden md:flex items-center space-x-8"
+              >
+                <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-sakura-500 dark:hover:text-sakura-400 transition-colors">About</a>
+                <a href="#utilities" className="text-gray-600 dark:text-gray-300 hover:text-sakura-500 dark:hover:text-sakura-400 transition-colors">Utilities</a>
+                <a href="#gallery" className="text-gray-600 dark:text-gray-300 hover:text-sakura-500 dark:hover:text-sakura-400 transition-colors">Gallery</a>
+                <a href="#roadmap" className="text-gray-600 dark:text-gray-300 hover:text-sakura-500 dark:hover:text-sakura-400 transition-colors">Roadmap</a>
+                <a href="#launch" className="text-gray-600 dark:text-gray-300 hover:text-sakura-500 dark:hover:text-sakura-400 transition-colors">Launch</a>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                <ThemeToggle />
+              </motion.div>
+            </div>
           </div>
         </div>
       </nav>
